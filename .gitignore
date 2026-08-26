@@ -13,3 +13,6 @@ debian/*.debhelper.log
 debian/*.substvars
 debian/debhelper-build-stamp
 debian/files
+
+# Claude Code local config
+.claude/
