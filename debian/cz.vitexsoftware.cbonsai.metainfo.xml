@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="console-application">
+  <id>cz.vitexsoftware.cbonsai</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
+
+  <name>cbonsai</name>
+  <summary>Grow bonsai trees in your terminal</summary>
+
+  <description>
+    <p>
+      cbonsai is an advanced bonsai tree generator for the terminal, with
+      seasonal color changes, procedural leaf generation, and support for
+      persistent real-time growth. Trees automatically adapt their colors
+      based on the current season and can be configured to grow live, over
+      a fixed time, or over days and weeks between runs.
+    </p>
+    <p>
+      This implementation began as a fork of John Allbritten's cbonsai and
+      has since diverged with a rewritten growth engine, procedural
+      foliage, structural trunks, and seasonal color palettes.
+    </p>
+  </description>
+
+  <url type="homepage">https://github.com/Vitexus/cbonsai</url>
+  <url type="bugtracker">https://github.com/Vitexus/cbonsai/issues</url>
+
+  <icon type="stock">cz.vitexsoftware.cbonsai</icon>
+
+  <categories>
+    <category>ConsoleOnly</category>
+    <category>Game</category>
+  </categories>
+
+  <keywords>
+    <keyword>bonsai</keyword>
+    <keyword>ascii-art</keyword>
+    <keyword>terminal</keyword>
+    <keyword>ncurses</keyword>
+    <keyword>tree</keyword>
+  </keywords>
+
+  <provides>
+    <binary>cbonsai</binary>
+  </provides>
+
+  <releases>
+    <release version="1.0.0" date="2026-08-26">
+      <description>
+        <p>Initial Debian packaging.</p>
+      </description>
+    </release>
+  </releases>
+
+  <content_rating type="oars-1.1"/>
+</component>

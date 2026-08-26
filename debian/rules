@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	dh_auto_build
+	$(MAKE) cbonsai.6
+
+override_dh_auto_install:
+	dh_auto_install -- PREFIX=/usr
+	install -d debian/cbonsai/usr/games
+	mv debian/cbonsai/usr/bin/cbonsai debian/cbonsai/usr/games/cbonsai
+	rmdir debian/cbonsai/usr/bin
+	install -d debian/cbonsai/usr/share/metainfo
+	install -m 644 debian/cz.vitexsoftware.cbonsai.metainfo.xml \
+		debian/cbonsai/usr/share/metainfo/
+	install -d debian/cbonsai/usr/share/icons/hicolor/scalable/apps
+	install -m 644 debian/cbonsai.svg \
+		debian/cbonsai/usr/share/icons/hicolor/scalable/apps/cz.vitexsoftware.cbonsai.svg
+
+override_dh_auto_test:
+	appstreamcli validate --pedantic --no-net \
+	    debian/cz.vitexsoftware.cbonsai.metainfo.xml

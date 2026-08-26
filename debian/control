@@ -1,0 +1,31 @@
+Source: cbonsai
+Section: games
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13),
+ pkg-config,
+ libncurses-dev,
+ scdoc,
+ appstream,
+Standards-Version: 4.7.0
+Homepage: https://github.com/Vitexus/cbonsai
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/Vitexus/cbonsai.git
+Vcs-Browser: https://github.com/Vitexus/cbonsai
+
+Package: cbonsai
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: grow bonsai trees in your terminal
+ cbonsai is an advanced bonsai tree generator for the terminal, with
+ seasonal color changes, procedural leaf generation, and support for
+ persistent real-time growth. Trees automatically adapt their colors
+ based on the current season and can be configured to grow live, over
+ a fixed time, or over days and weeks between runs.
+ .
+ This implementation began as a fork of John Allbritten's cbonsai and
+ has since diverged with a rewritten growth engine, procedural
+ foliage, structural trunks, and seasonal color palettes.
