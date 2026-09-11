@@ -5,7 +5,7 @@
 String[] distributions = [
 			// 'debian:bookworm', // Disabled: Debian ships an unrelated official "cbonsai"
 			// 'debian:trixie',   // package (gitlab.com/jallbrit/cbonsai) at a higher version,
-			// 'debian:forky',    // which apt prefers over this fork's build, breaking
+			'debian:forky',
 			//                    // cbonsai-dbgsym's exact-version dependency on cbonsai.
 			'ubuntu:jammy',
 			'ubuntu:noble',
